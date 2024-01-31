@@ -4,7 +4,7 @@ process QUICKSNP {
 
     // conda (params.enable_conda ? "bioconda::quicksnp=1.0.1" : null)
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-        'quay.io/staphb/quicksnp:1.0.1' :
+        'https://depot.galaxyproject.org/singularity/quicksnp%3A1.0.1--py311hdfd78af_0' :
         'quay.io/staphb/quicksnp:1.0.1' }"
 
     input:
